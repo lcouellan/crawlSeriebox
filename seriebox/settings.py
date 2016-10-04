@@ -14,6 +14,13 @@ BOT_NAME = 'seriebox'
 SPIDER_MODULES = ['seriebox.spiders']
 NEWSPIDER_MODULE = 'seriebox.spiders'
 
+ITEM_PIPELINES = ['seriebox.pipelines.SerieboxPipeline': 100, ]
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "seriebox"
+MONGODB_COLLECTION = "serie"
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'seriebox (+http://www.yourdomain.com)'
