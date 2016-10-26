@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head lang="fr">
+		<title>Crawler SérieBox</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div id="entete">
+			<h1><a href="#description">Crawler SérieBox</a></h1>
+			<nav id="menu" class="clearfix">
+				<ul>
+					<li><a id="menu_services" href="#description">DESCRIPTION</a></li>
+					<li><a id="menu_domaines" href="#data">RESULTATS</a></li>
+					<li><a id="menu_contact" href="#apropos">A PROPOS</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div id="description">
+			<h1>Analyse de données sur les séries</h1>
+			<div id="row" class="clearfix">
+				<div class="colonne">
+					<h3>Crawling</h3>
+					<p>Récupération de toutes les données liées aux séries présentes sur le site <a href="http://www.seriebox.com">www.seriebox.com</a></p>
+				</div>
+				<div class="colonne">
+					<h3>Stockage</h3>
+					<p>Sauvegarde des données via la base de données non traditionnelle <a href="https://www.mongodb.com">MongoDB</a></p>
+				</div>
+				<div class="colonne">
+					<h3>Visualisation</h3>
+					<p>Mise en forme des données collectées avec la librairie <a href="https://d3js.org/">D3.js</a></p>
+				</div>
+			</div>
+		</div>
+		<div id="data">
+			<h3> Résultats </h3>
+			<table>
+			</table>
+		</div>
+		<div id="apropos">
+			<h3>A propos</h3>
+		</div>
+	</body>
+</html>
