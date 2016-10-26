@@ -1,0 +1,194 @@
+/* Classe enlevant le caractère flottant des blocs */
+
+.clearfix:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* Règles générales */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "spinnaker";
+    color: #242221;
+}
+
+td {
+	padding-left: 20px;
+}
+
+a {
+	color: #242221;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    color: #168ccc;
+}
+
+/* Importation de police */
+
+@font-face {
+    font-family: "spinnaker";
+    src: url('../police/Spinnaker-Regular.ttf');
+}
+
+/* Header */
+
+#entete {
+    width: 100%;
+    position: fixed;
+    top:0;
+    bottom: auto;
+    height: 60px;
+    background-color: #f6f6f6;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+#entete h1 {
+    float: left;
+    width: 295px;
+    height: 46px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    padding-left: 20px;
+    color: #168ccc;
+}
+
+#entete a {
+	color: #168ccc;	
+    text-decoration: none;
+    text-align: center;
+}
+
+#entete a:hover {
+    color: #168ccc;
+}
+
+/* Bloc de navigation */
+
+#menu {
+    float: right;
+    width: 65%;
+    height: 100%;
+}
+
+#menu {
+    text-align: center;
+    background-color: #f6f6f6;
+    height: 60px;
+}
+
+#menu ul {
+    display: inline-block;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    list-style-type: none;
+}
+
+#menu li {
+    color: #55514d;
+    float: left;
+    width: 180px;
+    height: 40px;
+    padding: 0px;
+    line-height: 40px;
+    background-color: #f6f6f6;
+    border-right: 1px solid #DCDCDC;
+}
+
+#menu li:last-child {
+    border-right: 0px solid #DCDCDC;
+}
+
+#menu li a:hover {
+    color: #168ccc;
+}
+
+#menu li a:active {
+    color: #168ccc;
+}
+
+#menu li a {
+    display: block;
+    text-decoration: none;
+    color: #55514d;;
+}
+
+/* Description */
+
+#description {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 60px;
+}
+
+#description h1 {
+	color: #168ccc;
+	text-align: center;
+	font-size: 35px;
+}
+
+#description .colonne {
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+
+.colonne h3 {
+	color: #279ddd;
+}
+
+/* Résultats */
+
+#data {
+    width: 100%;
+    min-height: 350px;
+}
+
+#data h3 {
+	color: #279ddd;
+	text-align: center;
+	font-size: 30px;
+}
+
+/* A propos */
+
+#apropos {
+    width: 100%;
+    min-height: 100px;
+    padding-top: 10px;	
+    background-color: #656565;
+    color: #DADADA;
+}
+
+#apropos h3 {
+	text-align: center;
+}
+
+
+/* Pour les petits écrans */
+@media screen and (max-width: 900px) {
+
+	#entete h1 {
+		width: 180px;
+		font-size: 18px;
+		line-height: 40px;
+    }
+
+	#menu {
+        float: right;
+        width: 65%;
+        height: 100%;
+    }
+
+	#menu li {
+        width: 110px;
+        font-size: 13px;
+    }
+}
