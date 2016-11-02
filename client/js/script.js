@@ -17,8 +17,7 @@ function draw(data) {
       return (d.nombreVotes) + 'px';
     })
     .style('background-color','#168ccc')
-    .style('border','1px solid black')
     .style('height','10px');
 }
 
-d3.json("../sao.json", draw);
+d3.json("../test.json", draw);

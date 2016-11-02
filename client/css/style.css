@@ -29,6 +29,17 @@ a:hover {
     color: #168ccc;
 }
 
+.triangles {
+    width: 250px;
+    height: auto;
+    margin-top: 35  px;
+    margin-bottom: 0px;
+}
+
+.centrage {
+    text-align: center;
+}
+
 /* Importation de police */
 
 @font-face {
@@ -123,21 +134,34 @@ a:hover {
 /* Description */
 
 #description {
-    width: 100%;
+    width: 87%;
     min-height: 200px;
     padding-top: 60px;
+    margin-left: 10%;
+    margin-right: 3%;
+    text-align: center;
 }
 
 #description h1 {
 	color: #168ccc;
 	text-align: center;
+    margin-left: -7%;
 	font-size: 35px;
 }
 
 #description .colonne {
-	width: 33%;
+	width: 29%;
 	float: left;
 	text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#description .icons {
+    width: 60px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .colonne h3 {
@@ -146,31 +170,64 @@ a:hover {
 
 /* Résultats */
 
-#data {
+#bandeau {
+    background-color: #168ccc;
+    height: 80px;
     width: 100%;
-    min-height: 350px;
 }
 
-#data h3 {
-	color: #279ddd;
+#resultat {
+    width: 100%;
+    min-height: 350px;
+    padding-bottom: 50px;
+}
+
+#resultat h3 {
 	text-align: center;
-	font-size: 30px;
+    line-height:80px;
+    color: #f6f6f6;
+    font-size: 30px;
+}
+
+#fleche_bas {
+    margin: 0 auto;
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top:15px solid #168ccc;
+    padding-bottom: 25px;
 }
 
 /* A propos */
 
 #apropos {
     width: 100%;
-    min-height: 100px;
-    padding-top: 10px;	
-    background-color: #656565;
+    min-height: 120px;
+    padding-top: 5px;	
+    background-color: #168ccc;
     color: #DADADA;
+    text-align: center;
 }
 
 #apropos h3 {
-	text-align: center;
+    font-size: 20px;
 }
 
+#apropos p {
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#apropos a {
+    color: #DADADA; 
+    text-decoration: none;
+}
+
+#apropos a:hover {
+    color: #252525;
+}
 
 /* Pour les petits écrans */
 @media screen and (max-width: 900px) {
