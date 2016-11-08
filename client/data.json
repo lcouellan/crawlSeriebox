@@ -1,0 +1,41 @@
+[
+	{
+		"nom": "Game of thrones", "popularite": 250
+	},
+	{
+		"nom": "Vikings", "popularite": 183
+	},
+	{
+		"nom": "Arrow", "popularite": 50
+	},
+	{
+		"nom": "The Walking Dead", "popularite": 235
+	},
+	{
+		"nom": "Westworld", "popularite": 150
+	},
+	{
+		"nom": "Mr. Robot", "popularite": 80
+	},
+	{
+		"nom": "The 100", "popularite": 105
+	},
+	{
+		"nom": "Peaky Blinders", "popularite": 76
+	},
+	{
+		"nom": "Once Uppon A Time", "popularite": 134
+	},
+	{
+		"nom": "Banshee", "popularite": 104
+	},
+	{
+		"nom": "American Horror Story", "popularite": 185
+	},
+	{
+		"nom": "Black Mirror", "popularite": 162
+	},
+	{
+		"nom": "Breaking Bad", "popularite": 193
+	}
+]

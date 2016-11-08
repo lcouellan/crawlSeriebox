@@ -179,7 +179,6 @@ a:hover {
 #resultat {
     width: 100%;
     min-height: 350px;
-    padding-bottom: 50px;
 }
 
 #resultat h3 {
@@ -197,6 +196,12 @@ a:hover {
     border-right: 15px solid transparent;
     border-top:15px solid #168ccc;
     padding-bottom: 25px;
+}
+
+#resultat #pieChart {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
 }
 
 /* A propos */

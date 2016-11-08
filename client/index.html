@@ -4,8 +4,13 @@
 		<title>Crawler SérieBox</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://d3js.org/d3.v3.min.js"></script>
 		<script src="js/script.js"></script>
+		<script src="js/pie.js"></script>
+		<script src="js/d3pie.min.js"></script>
+		<!-- include jQuery library --> 
+		<!-- jQuery -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	</head>
 	<body>
 		<div id="entete">
@@ -23,7 +28,7 @@
 			<div id="row" class="clearfix">
 				<div class="colonne">
 					<h3>Crawling</h3>
-					<p>Récupération de données liées aux séries présentes sur le site <a href="http://www.seriebox.com">seriebox.com</a></p>
+					<p>Récupération de données de séries présentes sur le site <a href="http://www.seriebox.com">seriebox.com</a> avec <a href="https://scrapy.org/">Scrapy</a></p> 
 					<img src="medias/icones/iconmonstr-magnifier.png" alt="crawl" class="icons"/>
 				</div>
 				<div class="colonne">
@@ -47,6 +52,7 @@
 				<table>
 				</table>
 			</div>
+			<div id="pieChart"></div>
 		</div>
 		<div id="apropos">
 			<h3>A propos</h3>
