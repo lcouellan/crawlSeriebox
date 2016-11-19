@@ -5,13 +5,13 @@ const app = express();
 
 app.use(express.static(path.join(__dirname,"../client")));
 
-app.get('/data.json', (req, res) => {
-	mongoClient.connect("mongodb://localhost:28017/seriebox", (err, db) => {
+app.get('/test', (req, res) => {
+	mongoClient.connect("mongodb://localhost:27017/seriebox", (err, db) => {
 		if (err) {
 			return console.dir(err);
 		}
-		const bikesCollection = db.collection('series');
-		bikesCollection.find().toArray((err, items) => {
+		const series = db.collection('series');
+		series.find().toArray((err, items) => {
 			res.json(items);
 			db.close();
 		});

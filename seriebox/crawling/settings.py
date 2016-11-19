@@ -95,5 +95,5 @@ ITEM_PIPELINES = {
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
-MONGODB_DB = "seriebox"
+MONGODB_DB = "test"
 MONGODB_COLLECTION = "series"

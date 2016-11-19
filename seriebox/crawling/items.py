@@ -8,14 +8,11 @@
 import scrapy
 
 class Episode(scrapy.Item):
+    saison = scrapy.Field()
     numero = scrapy.Field()
-    titreEn = scrapy.Field()
-    titreFr = scrapy.Field()
+    titre = scrapy.Field()
     dateDiffusion = scrapy.Field()
     note = scrapy.Field()
-class Saison(scrapy.Item):
-    numero = scrapy.Field()
-    episode = scrapy.Field(serializer=Episode)
 class Serie(scrapy.Item):
     nom = scrapy.Field()
     synopsis = scrapy.Field()
@@ -28,4 +25,4 @@ class Serie(scrapy.Item):
     note = scrapy.Field()
     nombreVotes = scrapy.Field()
     genres = scrapy.Field()
-    saison = scrapy.Field(serializer=Saison)
+    episodes = scrapy.Field(serializer=Episode)

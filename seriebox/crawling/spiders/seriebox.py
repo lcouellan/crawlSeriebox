@@ -3,6 +3,7 @@ import scrapy
 import encodings
 import win32api
 from crawling.items import Serie
+from crawling.items import Episode
 
 
 class SerieBoxSpider(scrapy.Spider):
@@ -23,7 +24,6 @@ class SerieBoxSpider(scrapy.Spider):
                 req.meta['serie'] = Serie()
                 yield req
         next_page = response.css('a.link_suivant::attr(href)').extract_first()
-        break;
         if next_page is not None:
             next_page = response.urljoin(next_page)
             yield scrapy.Request(next_page, callback=self.parseSeries)
@@ -42,17 +42,4 @@ class SerieBoxSpider(scrapy.Spider):
         serie['note'] = el.css('#fiche_v2_header_average span.average_number::text').extract_first(),
         serie['nombreVotes'] = el.css('#fiche_v2_header_average span.nbrevotes_number::text').extract_first(),
         serie['synopsis'] = el.css('#row_manage_serie #tvshow_synopsis p::text').extract_first()
-        serie['saison'] = Saison()
-        liensSaisons = response.css('.seasons_change .container .row ul.nav li')
-        for lien in liensSaisons:
-            if url is not None:
-                url = response.urljoin(url)
-                req = scrapy.Request(url=url, callback=self.parseSaison)
-                req.meta['saison'] = serie['saison']
-                yield req
         return serie
-    def parseSaison(self, response):
-        saison = response.meta['saison']
-        el = response.css('body')
-        saison['numero'] = el.css('.seasons_change .container .row ul.nav li a::text').extract_first(),
-        return saison
