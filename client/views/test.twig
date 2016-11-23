@@ -1,0 +1,8 @@
+{% for serie in series %}
+
+
+{% if serie.nombreVotes|round > 1000 %}
+	<pre>{{ serie.nom }}</pre>
+    <pre>{{ serie.nombreVotes }}</pre>
+{% endif %}
+{% endfor %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head lang="fr">
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+		<script src="../js/script.js"></script>
+		<script src="../js/d3pie.min.js"></script>
+		<!-- include jQuery library --> 
+		<!-- jQuery -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+  	{% include 'header.twig' %}
+  	{% block body %}
+  	{% endblock %}
+  	{% include 'footer.twig' %}
+  	{% block javascripts %}
+  	{% endblock %}
+	</body>
+</html>

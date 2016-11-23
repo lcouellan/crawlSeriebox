@@ -1,0 +1,91 @@
+{% extends 'base.twig' %}
+{% block title %}Crawler Sériebox{% endblock %}
+{% block body %}
+<div id="description">
+	<h1>Analyse de données sur les séries</h1>
+	<div id="row" class="clearfix">
+		<div class="colonne">
+			<h3>Crawling</h3>
+			<p>Récupération de données de séries présentes sur le site <a href="http://www.seriebox.com">seriebox.com</a> avec <a href="https://scrapy.org/">Scrapy</a></p> 
+			<img src="medias/icones/iconmonstr-magnifier.png" alt="crawl" class="icons"/>
+		</div>
+		<div class="colonne">
+			<h3>Stockage</h3>
+			<p>Sauvegarde des données via la base de données non traditionnelle <a href="https://www.mongodb.com">MongoDB</a></p>
+			<img src="medias/icones/iconmonstr-database.png" alt="stockage" class="icons"/>
+		</div>
+		<div class="colonne">
+			<h3>Visualisation</h3>
+			<p>Mise en forme et affichage des données collectées avec la librairie <a href="https://d3js.org/">D3.js</a></p>
+			<img src="medias/icones/iconmonstr-monitoring.png" alt="visualisation" class="icons"/>
+		</div>
+	</div>
+</div>
+<div id="resultat">
+	<div id="bandeau">
+		<h3> Résultats </h3>
+	</div>
+	<div id="fleche_bas"></div>
+	<div id="pieChart"></div>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script>
+// Initialize empty array
+
+var data = [];
+
+{% for serie in series %}
+  {% if serie.nombreVotes|round > 750 %}
+    data.push({
+      label: "{{ serie.nom }}",
+      value: {{ serie.nombreVotes }}
+    });
+  {% endif %}
+{% endfor %}
+
+
+
+  var pie = new d3pie("pieChart", {
+
+    "header": {
+
+      "title": {
+
+        "text": "Séries les plus populaires en France",
+
+        "fontSize": 22,
+
+        "font": "verdana"
+
+      },
+
+    },
+
+    "size": {
+
+      "canvasHeight": 600,
+
+      "canvasWidth":800
+
+    },
+
+    "data": {
+
+      "content": data
+
+    },
+
+    "labels": {
+
+      "outer": {
+
+        "pieDistance": 32
+
+      }
+
+    }
+
+  });
+</script>
+{% endblock %}

@@ -40,6 +40,6 @@ class SerieBoxSpider(scrapy.Spider):
         serie['acteurs'] =  el.css('#fiche_v2_header_title h2 a::text').extract(),
         serie['pays'] = el.css('#fiche_v2_header_title h2 img::attr(alt)').extract_first(),            
         serie['note'] = el.css('#fiche_v2_header_average span.average_number::text').extract_first(),
-        serie['nombreVotes'] = el.css('#fiche_v2_header_average span.nbrevotes_number::text').extract_first(),
+        serie['nombreVotes'] = el.css('span.nbrevotes_number::text').extract_first(),
         serie['synopsis'] = el.css('#row_manage_serie #tvshow_synopsis p::text').extract_first()
         return serie
