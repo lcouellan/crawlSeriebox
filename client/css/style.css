@@ -233,7 +233,25 @@ a:hover {
 #apropos a:hover {
     color: #252525;
 }
-
+.node {
+  cursor: pointer;
+}
+.node circle {
+  fill: #00008b;
+  stroke: red;
+  stroke-width: 3px;
+}
+.node text {
+  font: 12px sans-serif;
+}
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+#chart{
+    margin-top: 70px;
+}
 /* Pour les petits écrans */
 @media screen and (max-width: 900px) {
 
