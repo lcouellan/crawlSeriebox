@@ -50,7 +50,7 @@ var compteurAttribut = 1;
         "id":"2_" + compteurAttribut + 7,
         },
         {
-        "name":'Synopsis : {{ serie.synopsis[:250]|replace({"'":"\'"}) }}...',
+        "name":'Synopsis : {{ serie.synopsis[:150]|replace({"'":"\'"}) }}...',
         "id":"2_" + compteurAttribut + 8,
         },
         {
@@ -70,7 +70,7 @@ var data = {
     "children": children
 };
 
- var w = 1920,
+ var w = 1200,
     h = 4000,
     i = 0,
     barHeight = 20,
@@ -225,7 +225,7 @@ function click(d) {
 }
 
 function color(d) {
-    return d._children ? "#0065B2" : d.children ? "A4EFFF" : "#E2A5FF";
+    return d._children ? "#0065B2" : d.children ? "#FFF" : "#FFF";
 }
 </script>
 {% endblock %}

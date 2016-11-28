@@ -51,6 +51,20 @@ app.get('/informations', (req, res) => {
 		});
 	});
 });
+app.get('/asterplot', (req, res) => {
+	mongoClient.connect("mongodb://localhost:27017/seriebox", (err, db) => {
+		if (err) {
+			return console.dir(err);
+		}
+		const series = db.collection('series');
+		series.find({},{_id:0 , nom:1,nombreVotes:1}).toArray((err, series) => {
+			res.render('asterPlot.twig', {
+                    series : series,
+             });
+			db.close();
+		});
+	});
+});
 
 app.listen(3000, () => {
 	console.log("Le serveur est en train d'écouter...");
