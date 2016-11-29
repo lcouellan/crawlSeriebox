@@ -100,6 +100,14 @@ a:hover {
 .centrage {
     text-align: center;
 }
+
+svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
 .clearSvg {
     margin-top: 80px;
 }
@@ -240,12 +248,12 @@ a:hover {
     width: 100%;
 }
 
-#resultat {
+.resultat {
     width: 100%;
-    min-height: 350px;
+    min-height: 200px;
 }
 
-#resultat h3 {
+.resultat h3 {
 	text-align: center;
     line-height:80px;
     color: #f6f6f6;
@@ -262,7 +270,7 @@ a:hover {
     padding-bottom: 25px;
 }
 
-#resultat #pieChart {
+.resultat #pieChart {
     margin-left: auto;
     margin-right: auto;
     width: 800px;
@@ -301,8 +309,7 @@ a:hover {
   cursor: pointer;
 }
 .node circle {
-  fill: #00008b;
-  stroke: red;
+  fill: #168ccc;
   stroke-width: 3px;
 }
 .node text {
