@@ -33,7 +33,7 @@ node server.js
 
 * [`NodeJs`](https://nodejs.org)
 * [`MongoDb`](https://www.mongodb.com/fr)
-* [`MongoDb`](https://scrapy.org/)
+* [`Scrapy`](https://scrapy.org/)
 * [`D3.js`](https://d3js.org/)
 * [`Twig`](http://twig.sensiolabs.org/)
 
